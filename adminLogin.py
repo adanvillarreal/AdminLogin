@@ -23,11 +23,11 @@ for url in scanfile.readlines():
     x+=1
     try:
         print url + str(x)
-        if '10.2.25' in url or '10.2.46' in url or '10.2.70' in url or '10.2.80.71' in url:
+	#in case you need to blacklist a net, include them here       
+	#if '10.2.80' in url:
             continue
         for path in pathList:
             nurl= url.rstrip()+'/'+path.rstrip()
-            #print nurl
             r = Request(nurl)
             print '\t'+path
             try:
