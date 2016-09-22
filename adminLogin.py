@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # encoding: UTF-8
-#Todo: Signal handling for TimeoutException
 from urllib2 import Request, urlopen, URLError, HTTPError, socket
 import colorama
 import os
@@ -25,7 +24,7 @@ for url in scanfile.readlines():
         print url + str(x)
 	#in case you need to blacklist a net, include them here       
 	#if '10.2.80' in url:
-            continue
+           # continue
         for path in pathList:
             nurl= url.rstrip()+'/'+path.rstrip()
             r = Request(nurl)
